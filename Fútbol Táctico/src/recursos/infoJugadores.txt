@@ -1,0 +1,12 @@
+Nombre,Velocidad,Remates,Posesión
+Jugador1,85,70,75
+Jugador2,80,65,80
+Jugador3,75,80,70
+Jugador4,70,85,65
+Jugador5,82,75,78
+Jugador6,78,82,73
+Jugador7,75,70,80
+Jugador8,79,73,85
+Jugador9,81,68,75
+Jugador10,73,80,77
+Jugador11,77,75,78
