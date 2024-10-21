@@ -26,6 +26,9 @@ public class Jugador {
         this.rem = rem;
     }
 
+    public Jugador() {
+    }
+
     public void asignar() {
         try {
             BufferedReader reader = new BufferedReader(new FileReader("src\\recursos\\infoJugadores.txt"));
