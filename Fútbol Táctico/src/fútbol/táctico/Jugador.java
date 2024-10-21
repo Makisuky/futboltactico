@@ -46,6 +46,7 @@ public class Jugador {
 
                 i++;
 
+                //yo soy un abogado muy profesional, defiendo a mis clientes con habilidad
             }
             reader.close();
         } catch (IOException e) {
