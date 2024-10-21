@@ -18,6 +18,10 @@ public class Jugador {
     int vel;
     int pos;
     int rem;
+    Jugador izq;
+    Jugador der;
+
+    static Jugador jugadores[] = new Jugador[11];
 
     public Jugador(String nombre, int vel, int pos, int rem) {
         this.nombre = nombre;
@@ -31,17 +35,19 @@ public class Jugador {
 
     public void asignar() {
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("src\\recursos\\infoJugadores.txt"));
+            BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\alejo\\Downloads\\infoJugadores.txt"));
             String line;
-            while ((line = reader.readLine()) != null) {
+            int i = 0;
+            while ((line = reader.readLine()) != null && i < jugadores.length) {
 
-                if (line.trim().isEmpty()) {
-                    continue;
-                }
+                String[] dataset = line.split(",");
 
-                String[] dataset = line.split(";");
-                Jugador plantilla = new Jugador(dataset[0], Integer.parseInt(dataset[1]), Integer.parseInt(dataset[2]), Integer.parseInt(dataset[3]));
+                jugadores[i] = new Jugador(dataset[0], Integer.parseInt(dataset[1]), Integer.parseInt(dataset[2]), Integer.parseInt(dataset[3]));
+
+                i++;
+
             }
+            reader.close();
         } catch (IOException e) {
             System.out.println("Error leyendo el archivo: " + e.getMessage());
         }

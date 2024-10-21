@@ -16,9 +16,10 @@ public class FútbolTáctico {
     public static void main(String[] args) {
         // TODO code application logic here
         Jugador jugador = new Jugador();
+        jugador.asignar();
 
         for (int i = 0; i < 11; i++) {
-            jugador.asignar();
+            System.out.println(jugador.jugadores[i].nombre);
 
         }
 
