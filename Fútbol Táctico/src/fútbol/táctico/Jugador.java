@@ -23,7 +23,7 @@ public class Jugador {
 
     static Jugador jugadores[] = new Jugador[11];
 
-    public Jugador(String nombre, int vel, int pos, int rem) {
+    public Jugador(String nombre, int vel, int rem, int pos) {
         this.nombre = nombre;
         this.vel = vel;
         this.pos = pos;
@@ -35,7 +35,7 @@ public class Jugador {
 
     public void asignar() {
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\alejo\\Downloads\\infoJugadores.txt"));
+            BufferedReader reader = new BufferedReader(new FileReader("src\\recursos\\infoJugadores.txt"));
             String line;
             int i = 0;
             while ((line = reader.readLine()) != null && i < jugadores.length) {
